@@ -75,4 +75,4 @@ yolo.fit(
 )
 
 
-yolo.save("model/model.keras")
+yolo.save("model.keras")
