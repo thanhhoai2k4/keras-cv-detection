@@ -39,7 +39,7 @@ val_ds = val_ds.prefetch(tf.data.AUTOTUNE)
 #   yolo_v8_xl_backbone_coco: 30.97M
 
 backbone = keras_cv.models.YOLOV8Backbone.from_preset(
-    "yolo_v8_xl_backbone_coco"  # We will use yolov8 small backbone with coco weights
+    "yolo_v8_xs_backbone_coco"  # We will use yolov8 small backbone with coco weights
 )
 
 
@@ -70,7 +70,7 @@ callback = PyCOCOCallback(
 yolo.fit(
     train_ds,
     validation_data=val_ds,
-    epochs=1000,
+    epochs=200,
     callbacks=callback,
 )
 
